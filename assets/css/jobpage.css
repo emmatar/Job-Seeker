@@ -4,9 +4,16 @@ header {
     justify-content: space-between;
 }
 
+main {
+    padding: 4rem 0px;
+}
+
 h1 {
     margin-left: 1rem;
     font-size: 40pt;
+    text-decoration: 4px underline;
+    text-underline-offset: 8px;
+    text-decoration-color: white;
 }
 
 button {
@@ -14,3 +21,18 @@ button {
     margin-top: 1.5rem;
 }
 
+.job-post-container {
+    padding-bottom: 6em;
+}
+
+.job-post {
+    height: 20rem;
+    border: 1px solid white;
+    margin: 1rem 0;
+}
+
+.spacer {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
