@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h1 {
+    margin-left: 1rem;
+    font-size: 40pt;
+}
+
+button {
+    margin-right: 1rem;
+    margin-top: 1.5rem;
+}
+
