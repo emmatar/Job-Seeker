@@ -1,5 +1,42 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+  /* style.css */
 
-h1 {
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    background-color: black; /* Set background color to black */
+  }
+  
+  .full-height {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .search-bar {
+    margin-top: 20px;
+    width: 50%;
+  }
+  
+  .input,
+  .button {
+    color: black; /* Text color black for input and button */
+    background-color: white; /* Background white for input and button */
+  }
+  
+  h1 {
+    color: white !important;
+    font-size: 6em !important;
+  }
+  
+  .heart-button {
+    position: absolute;
+    top: -5px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 50px;
     color: red;
-}
+  }
+  
