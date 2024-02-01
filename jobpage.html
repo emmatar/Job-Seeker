@@ -13,7 +13,7 @@
         <div id="search-save-container">
             <div id="mini-search" class="field has-addons">
                 <div class="control">
-                  <input class="input" type="text" placeholder="Search For a Job">
+                  <input id="searchQuery" class="input" type="text" placeholder="Search For a Job">
                 </div>
                 <div class="control">
                   <a class="button is-black">
@@ -26,15 +26,8 @@
     </header>
 
     <main class="has-text-white">
-        <div class="all-jobs-container">
-            <div class="job-post">
-                <div id="job-role"></div>
-                <div id="company-name"></div>
-                <div id="location"></div>
-                <div id="employment-type"></div>
-                <div id="is-remote"></div>
-                <div id="job-post-url"></div>
-            </div>
+        <div id="results" class="all-jobs-container">
+           
         </div>
     </main>
     <script src="/assets/js/findwork.js"></script>

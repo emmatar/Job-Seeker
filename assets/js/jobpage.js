@@ -12,4 +12,5 @@ function base() {
     })
 }
 
+performSearch();
 base();
