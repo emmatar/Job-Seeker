@@ -1,16 +1,31 @@
-var api = "f5217bc497mshb6d8ca9af6d12ccp18ff3bjsnbe6c2937dff1";
+const jobResults = document.querySelector("#job-results")
+const oneJobCont = document.querySelector("#one-job-cont") 
+const averageSalary = document.querySelector("#average-salary-text")
 
-function base() {
-    var url = `https://job-salary-data.p.rapidapi.com/job-salary?X-RapidAPI-Host=job-salary-data.p.rapidapi.com&X-RapidAPI-Key=${apiKey}&job_title=developer&location=newyork`
-
-    fetch(url).then(function (response) {
-        if (response.ok) {
-            response.json().then(function (data){
-                console.log(data);
-            })
-        }
-    })
+const testDataObj = {
+    position: "developer",
+    company: "google",
+    location: "kansasCity",
+    salary: "$73,000/year"
 }
 
-performSearch();
-base();
+// The empty parameter for this function will be the data retrieved from the Job Salary API
+// displayJobSalary () {
+    // averageSalary.textContent = {data};
+// }
+
+// The empty parameter for this function will be the data retrieved from the Job Search API
+function displayJobData () {
+    const jobType = testDataObj.position;
+
+    jobResults.textContent = `Search Results for: ${testDataObj.position}`
+    for (let index = 0; index < testDataObj.length; index++) {
+        const jobPosition = document.createElement("h3");
+        const jobCompany = document.createElement("h4");
+        const jobSalary = document.createElement("p");
+        const jobRemote = document.createElement("p");
+        const jobLink = document.createAttribute("a")
+
+    }
+}
+displayJobData()
