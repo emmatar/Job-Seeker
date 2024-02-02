@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-  <link rel="stylesheet" href="assets/css/index.css" />
-  <title>Job Seeker</title>
-</head>
-<body>
-  <div class="full-height">
-    <h1 class="title is-1 has-text-centered">Job Seeker</h1>
-    <div class="search-bar field has-addons">
-      <div class="control is-expanded">
-        <input
-          id="searchInput"
-          class="input is-medium"
-          type="text"
-          placeholder="Search jobs"
-        />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <title>Job Seeker</title>
+  </head>
+  <body>
+    <div class="full-height">
+      <h1 class="title is-1 has-text-centered">Job Seeker</h1>
+      <div class="search-bar field has-addons">
+        <div class="control is-expanded">
+          <input
+            id="searchInput"
+            class="input is-medium"
+            type="text"
+            placeholder="Search jobs"
+          />
+        </div>
+        <div class="control">
+          <button id="searchButton" class="button is-medium is-primary">
+            Search
+          </button>
+        </div>
       </div>
-      <div class="control">
-        <button id="searchButton" class="button is-medium is-primary">Search</button>
-      </div>
+      <div id="heartButton" class="heart-button">&#10084;</div>
     </div>
-    <div id="heartButton" class="heart-button">&#10084;</div>
-  </div>
 
-  <script src="assets/js/index.js"></script>
-</body>
+    <script src="assets/js/index.js"></script>
+  </body>
 </html>
