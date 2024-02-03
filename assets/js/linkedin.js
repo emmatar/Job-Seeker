@@ -373,7 +373,7 @@ const mockJobSearchdata = [
 
 function linkedinJobSearch() {
   return Promise.resolve(mockJobSearchdata);
-
+ 
   const url = "https://linkedin-jobs-search.p.rapidapi.com/";
   const options = {
     method: "POST",
