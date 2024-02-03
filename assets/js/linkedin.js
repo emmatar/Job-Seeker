@@ -401,6 +401,5 @@ function linkedinJobSearch() {
       console.error("Error:", error.message);
     });
 }
-linkedinJobSearch().then(function(data){
-    console.log(data)
-})
+// linkedinJobSearch().then(function(data){
+// })
