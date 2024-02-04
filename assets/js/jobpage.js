@@ -32,7 +32,7 @@ function displayJobSearchData(jobInfo) {
     // Assigning the "loop" created elements to the corresponding data for display
         jobRole.textContent = `Job Role: ${singleJobInfo.job_title}`;
         jobCompany.textContent = `Company: ${singleJobInfo.company_name}`;
-        jobLocation.textContent = `Location: ${singleJobInfo.jon_location}`;
+        jobLocation.textContent = `Location: ${singleJobInfo.job_location}`;
         jobPostDate.textContent = `Post Date: ${singleJobInfo.posted_date}`;
         jobCompanyUrlCont.textContent = "Company-Url: "
         jobPostUrlCont.textContent = "Job-Post-Url: "
