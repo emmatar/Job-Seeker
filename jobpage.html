@@ -11,25 +11,27 @@
     <header class="has-background-primary">
         <h1>Job Seeker</h1>
         <div id="search-save-container">
-            <form id="mini-search" class="field has-addons">
+            <div id="mini-search" class="field has-addons">
                 <div class="control">
-                  <input id="search-query" class="input" type="text" placeholder="Search For a Job">
+                  <input class="input" type="text" placeholder="Search For a Job">
                 </div>
                 <div class="control">
-                  <button input="button" type="button" class="button is-black">Search</button>
+                  <a class="button is-black">
+                    Search
+                  </a>
                 </div>
-              <button class="button is-primary has-background-black">Saved Jobs</button>
-            </form>
+            </div>
+            <button class="button is-primary has-background-black">Saved Jobs</button>
         </div>
     </header>
 
     <main class="has-text-white">
-      <h2 id="average-salary-text"></h2>
-        <div id="job-results" class="all-jobs-container">
-           <div id="one-job-cont"></div>
+        <div class="all-jobs-container">
+            </div>
         </div>
     </main>
-    <script src="/assets/js/findwork.js"></script>
+    <script src="/assets/js/linkedin.js"></script>
     <script src="/assets/js/jobpage.js"></script>
+
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 // this function links the data from the outer linkedIn.js file to this file.
 // "data" (the above parameter) is the actual info that the search will display
 linkedinJobSearch().then(function(data) {
@@ -32,7 +31,7 @@ function displayJobSearchData(jobInfo) {
     // Assigning the "loop" created elements to the corresponding data for display
         jobRole.textContent = `Job Role: ${singleJobInfo.job_title}`;
         jobCompany.textContent = `Company: ${singleJobInfo.company_name}`;
-        jobLocation.textContent = `Location: ${singleJobInfo.job_location}`;
+        jobLocation.textContent = `Location: ${singleJobInfo.jon_location}`;
         jobPostDate.textContent = `Post Date: ${singleJobInfo.posted_date}`;
         jobCompanyUrlCont.textContent = "Company-Url: "
         jobPostUrlCont.textContent = "Job-Post-Url: "
@@ -41,7 +40,6 @@ function displayJobSearchData(jobInfo) {
         jobCompanyUrl.title = "This is link"
         jobCompanyUrl.href = singleJobInfo.company_url;
         console.log(singleJobInfo.job_url);
-
 
         jobPostUrl.appendChild(here);
         jobCompanyUrl.appendChild(here);
@@ -54,13 +52,7 @@ function displayJobSearchData(jobInfo) {
         jobPostUrlCont.append(jobPostUrl)
         singleJobPost.append(jobPostUrlCont)
         allJobsContainer.append(singleJobPost)
-
     }
-
 }
-
-
-
-
 
 linkedinJobSearch();
