@@ -1,42 +1,61 @@
-  /* style.css */
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #000000;
+}
 
-  html,
-  body {
-    height: 100%;
-    margin: 0;
-    background-color: black; /* Set background color to black */
-  }
-  
-  .full-height {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .search-bar {
-    margin-top: 20px;
-    width: 50%;
-  }
-  
-  .input,
-  .button {
-    color: black; /* Text color black for input and button */
-    background-color: white; /* Background white for input and button */
-  }
-  
-  h1 {
-    color: white !important;
-    font-size: 6em !important;
-  }
-  
-  .heart-button {
-    position: absolute;
-    top: -5px;
-    right: 20px;
-    cursor: pointer;
-    font-size: 50px;
-    color: red;
-  }
-  
+.full-height {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.search-bar {
+  margin-top: 20px;
+  width: 50%;
+}
+h1 {
+  color: white !important;
+  font-size: 6em !important;
+}
+
+
+.heart-button {
+  position: absolute; /* Position the element absolutely */
+  top: -20px; /* 10px from the top of the page */
+  right: 50px; /* 10px from the left of the page */
+  font-size: 90px;
+  color: red;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.heart-button.liked {
+  color: pink;
+  transform: scale(1.1);
+}
+/* Add these styles to your existing CSS file or create a new one */
+
+#searchHistoryDropdown {
+  position: absolute;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  display: none;
+  z-index: 1;
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #f4f4f4;
+}

@@ -9,17 +9,28 @@
     />
     <link rel="stylesheet" href="assets/css/index.css" />
     <title>Job Seeker</title>
-</head>
-<body>
-    <header class="container">
-        <div class="columns">
-            <div class="column" id="site-name">Job Seeker</div>
-            <div class="column">*Nice Daily Message Here*</div>
-            <div class="column">(Saved Jobs Button)</div>
+  </head>
+  <body>
+    <div class="full-height">
+      <h1 class="title is-1 has-text-centered">Job Seeker</h1>
+      <div class="search-bar field has-addons">
+        <div class="control is-expanded">
+          <input
+            id="searchInput"
+            class="input is-medium"
+            type="text"
+            placeholder="Search jobs"
+          />
         </div>
-    </header>
-    <main>
-    </main>
-    <script src="/assets/js/script.js"></script>
+        <div class="control">
+          <button id="searchButton" class="button is-medium is-primary">
+            Search
+          </button>
+        </div>
+      </div>
+      <div id="heartButton" class="heart-button">&#10084;</div>
+    </div>
+
+    <script src="assets/js/index.js"></script>
   </body>
 </html>
