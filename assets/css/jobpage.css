@@ -21,18 +21,26 @@ h1 {
 
 h2 {
     margin: 1rem 2rem;
-    font-size: 40px;
+    font-size: 25px;
 }
 
 button {
     margin-left: .5rem;
 }
 
-
+a {
+    width: 10px
+}
 
 .all-jobs-container {
     display: flex;
     flex-wrap: wrap;
+}
+
+.single-job-post {
+    border: 1px solid white;
+    max-width: 300px;
+    flex-direction: ro
 }
 
 .job-post {
@@ -46,6 +54,10 @@ button {
     display: flex;
     justify-content: space-around;
     margin: 2rem 0;
+}
+
+.url {
+    display: flex;
 }
 
 #search-save-container {
