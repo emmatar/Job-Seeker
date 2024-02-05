@@ -1,4 +1,3 @@
-
 // this function links the data from the outer linkedIn.js file to this file.
 // "data" (the above parameter) is the actual info that the search will display
 linkedinJobSearch().then(function(data) {
@@ -41,7 +40,6 @@ function displayJobSearchData(jobInfo) {
         jobCompanyUrl.title = "This is link"
         jobCompanyUrl.href = singleJobInfo.company_url;
         console.log(singleJobInfo.job_url);
-
 
         jobPostUrl.appendChild(here);
         jobCompanyUrl.appendChild(here);
