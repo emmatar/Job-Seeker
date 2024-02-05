@@ -21,19 +21,16 @@ function performSearch() {
             return response.json();
         })
         .then(data => {
-            if (data && data.job_title && data.company_name && data.location && data.employment_type && data.is_remote !== undefined && data.job_post_url) {
+            if (data && data.median_salary && data.min_salary && data.max_salary) {
                 resultsContainer.innerHTML = `
                     <div class="job-post">
-                        <div id="job-role">${data.job_title} Salary Information</div>
-                        <div id="company-name">Company: ${data.company_name}</div>
-                        <div id="location">Location: ${data.location}</div>
-                        <div id="employment-type">Employment Type: ${data.employment_type}</div>
-                        <div id="is-remote">Remote: ${data.is_remote ? 'Yes' : 'No'}</div>
-                        <div id="job-post-url">URL: ${data.job_post_url}</div>
+                        <div id="median-salary">Median Salary: ${data.median_salary}</div>
+                        <div id="min-salary">Minimum Salary: ${data.min_salary}</div>
+                        <div id="max-salary">Maximum Salary: ${data.max_salary}</div>
                     </div>
                 `;
             } else {
-                throw new Error("Incomplete or missing data in the API response.");
+                throw new Error("Incomplete or missing salary data in the API response.");
             }
         })
         .catch(error => {
