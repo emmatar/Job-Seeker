@@ -1,13 +1,14 @@
 // this function links the data from the outer linkedIn.js file to this file.
 // "data" (the above parameter) is the actual info that the search will display
 linkedinJobSearch().then(function(data) {
+    console.log(data)
     displayJobSearchData(data)
 })
 
-performSearch().then(function(data) {
-    displayJobSearchSalary
-});
- 
+// performSearch().then(function(data) {
+//     displayJobSearchSalary()
+// });
+const allJobsContainer = document.querySelector(".all-jobs-container")
 function displayJobSearchData(jobInfo) {
     // (jobInfo) is the data from the search.
     // First, target the single "#job-post" container
@@ -16,7 +17,6 @@ function displayJobSearchData(jobInfo) {
     for (let index = 0; index < jobInfo.length; index++) {
     // The variable "singleJobInfo" will display information for a single job.
     // Variables created to display data from LinkedIn Job Search API
-        const allJobsContainer = document.querySelector(".all-jobs-container")
         const singleJobInfo = jobInfo[index];
         const jobRole = document.createElement("h2");
         const jobCompany = document.createElement("p");
@@ -33,6 +33,7 @@ function displayJobSearchData(jobInfo) {
         const here = document.createTextNode("Here")
         const savedButton =document.createElement('button')
         savedButton.setAttribute('class', 'button is-warning')
+        savedButton.setAttribute('data-info',btoa(JSON.stringify(singleJobInfo)))
         savedButton.textContent = "Save Job"
 
 
@@ -64,5 +65,12 @@ function displayJobSearchData(jobInfo) {
     }
 }
 
-performSearch();
+// performSearch();
 linkedinJobSearch();
+allJobsContainer.addEventListener('click', function(event){
+    if (event.target.matches('button')) {
+        const currentSavedJobs = JSON.parse(localStorage.getItem('savedJobs')) || [] 
+        currentSavedJobs.push(JSON.parse(atob(event.target.dataset.info)))
+        localStorage.setItem('savedJobs', JSON.stringify(currentSavedJobs))
+    }
+})

@@ -373,20 +373,22 @@ const mockJobSearchdata = [
 
 function linkedinJobSearch() {
   return Promise.resolve(mockJobSearchdata);
-
+  const searchHistory = JSON.parse(localStorage.getItem('searchHistory'))
+  const search_terms= searchHistory[searchHistory.length-1]
+  console.log(searchHistory)
   const url = "https://linkedin-jobs-search.p.rapidapi.com/";
   const options = {
     method: "POST",
     headers: {
-      "content-type": "application/json",
-      "X-RapidAPI-Key": "9a5191d708msh501771aaad05ffbp16386fjsn15450569a1b7",
+      "Content-Type": "application/json",
+      "X-RapidAPI-Key": "3397035361mshf743d9bcd8fc100p102234jsnfeb441dbede6",
       "X-RapidAPI-Host": "linkedin-jobs-search.p.rapidapi.com",
     },
-    body: {
-      search_terms: "python programmer",
-      location: "Chicago, IL",
+    body: JSON.stringify( {
+      search_terms: search_terms.job,
+      location: search_terms.city,
       page: "1",
-    },
+    }),
   };
 
   
@@ -401,5 +403,3 @@ function linkedinJobSearch() {
       console.error("Error:", error.message);
     });
 }
-linkedinJobSearch().then(function(data){
-})

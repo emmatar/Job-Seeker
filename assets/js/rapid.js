@@ -6,7 +6,7 @@ function performSearch() {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': "3397035361mshf743d9bcd8fc100p102234jsnfeb441dbede6",
+            'X-RapidAPI-Key': "dbcddaa41dmsh212d29f5fb65a98p142f87jsne1f200542b6d",
             'X-RapidAPI-Host': "job-salary-data.p.rapidapi.com"
         }
     };
@@ -19,10 +19,16 @@ function performSearch() {
             return response.json();
         })
         .then(data => {
-            if (data && data.median_salary) {
-                resultsContainer.innerHTML = `
+            if (data) {
+                const salaries = []
+                data.array.forEach(element => {
+                    salaries.push(element.median_salary)
+                });
+                const median_salary = salaries.reduce((a, b)=> a+b)/salaries.length
+                const salaryContainer = document.getElementById('salary-container')
+                salaryContainer.innerHTML = `
                     <div class="job-post">
-                        <div id="median-salary">Median Salary: ${data.median_salary}</div>
+                        <div id="median-salary">Median Salary: ${median_salary}</div>
                     </div>
                 `;
             } else {
