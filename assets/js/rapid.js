@@ -1,19 +1,17 @@
 function performSearch() {
-    const jobTitleInput = document.querySelector(".input");
-    const jobTitle = jobTitleInput.value;
-
+    const searchParams = JSON.parse(localStorage.getItem("searchHistory"))[JSON.parse(localStorage.getItem("searchHistory")).length - 1]
     const resultsContainer = document.querySelector(".all-jobs-container");
 
     const url = "https://job-salary-data.p.rapidapi.com/job-salary";
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': "38dce07450msha956092e6da75f4p15ebccjsn4459908195ed",
+            'X-RapidAPI-Key': "3397035361mshf743d9bcd8fc100p102234jsnfeb441dbede6",
             'X-RapidAPI-Host': "job-salary-data.p.rapidapi.com"
         }
     };
 
-    fetch(`${url}?job_title=${encodeURIComponent(jobTitle)}&location=new%20york%2C%20usa&radius=200`, options)
+    fetch(`${url}?job_title=${encodeURIComponent(searchParams.job)}&location=${encodeURIComponent(searchParams.city)}&radius=200`, options)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);

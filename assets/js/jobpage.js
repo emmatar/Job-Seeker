@@ -3,6 +3,10 @@
 linkedinJobSearch().then(function(data) {
     displayJobSearchData(data)
 })
+
+performSearch().then(function(data) {
+    displayJobSearchSalary
+});
  
 function displayJobSearchData(jobInfo) {
     // (jobInfo) is the data from the search.
@@ -39,7 +43,6 @@ function displayJobSearchData(jobInfo) {
         jobPostUrl.href = singleJobInfo.job_url;
         jobCompanyUrl.title = "This is link"
         jobCompanyUrl.href = singleJobInfo.company_url;
-        console.log(singleJobInfo.job_url);
 
         jobPostUrl.appendChild(here);
         jobCompanyUrl.appendChild(here);
@@ -55,4 +58,5 @@ function displayJobSearchData(jobInfo) {
     }
 }
 
+performSearch();
 linkedinJobSearch();
