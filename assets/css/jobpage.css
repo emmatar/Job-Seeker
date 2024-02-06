@@ -20,7 +20,6 @@ h1 {
 }
 
 h2 {
-    margin: 1rem 2rem;
     font-size: 25px;
 }
 
@@ -29,7 +28,7 @@ button {
 }
 
 a {
-    width: 10px
+    width: 100px;
 }
 
 .all-jobs-container {
@@ -38,6 +37,8 @@ a {
 }
 
 .single-job-post {
+    display: flex;
+    flex-wrap: wrap;
     border: 1px solid white;
     max-width: 300px;
     flex-direction: ro
@@ -49,6 +50,12 @@ a {
     border: 1px solid white;
     margin: 2rem;
 }
+
+.job-role-title {
+    margin: 1rem;
+}
+
+.job-det
 
 .spacer {
     display: flex;

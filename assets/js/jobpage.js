@@ -15,6 +15,7 @@ function displayJobSearchData(jobInfo) {
         const allJobsContainer = document.querySelector(".all-jobs-container")
         const singleJobInfo = jobInfo[index];
         const jobRole = document.createElement("h2");
+        jobRole.setAttribute('class', 'job-role-title')
         const jobCompany = document.createElement("p");
         const jobLocation = document.createElement("p");
         const jobPostDate = document.createElement("p");
@@ -26,7 +27,10 @@ function displayJobSearchData(jobInfo) {
         jobPostUrlCont.setAttribute('class', 'url');
         const singleJobPost = document.createElement("div");
         singleJobPost.setAttribute('class', "single-job-post")
+        const jobDetailCont = document.createElement("div")
+        jobDetailCont.setAttribute("class", "detail-container")
         const here = document.createTextNode("Here")
+        const here2 = document.createTextNode("Here")
         
     // Assigning the "loop" created elements to the corresponding data for display
         jobRole.textContent = `Job Role: ${singleJobInfo.job_title}`;
@@ -39,9 +43,8 @@ function displayJobSearchData(jobInfo) {
         jobPostUrl.href = singleJobInfo.job_url;
         jobCompanyUrl.title = "This is link"
         jobCompanyUrl.href = singleJobInfo.company_url;
-        console.log(singleJobInfo.job_url);
 
-        jobPostUrl.appendChild(here);
+        jobPostUrl.appendChild(here2);
         jobCompanyUrl.appendChild(here);
         singleJobPost.append(jobRole)
         singleJobPost.append(jobCompany)
