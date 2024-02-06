@@ -24,17 +24,9 @@ h2 {
     font-size: 25px;
 }
 
-button {
-    margin-left: .5rem;
-}
 
 a {
     width: 10px
-}
-
-.all-jobs-container {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .single-job-post {
@@ -50,22 +42,5 @@ a {
     margin: 2rem;
 }
 
-.spacer {
-    display: flex;
-    justify-content: space-around;
-    margin: 2rem 0;
-}
 
-.url {
-    display: flex;
-}
 
-#search-save-container {
-    display: flex;
-    margin: 1rem;
-    align-items: center;
-}
-
-#mini-search {
-    margin: 0;
-}
