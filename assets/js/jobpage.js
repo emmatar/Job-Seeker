@@ -18,6 +18,8 @@ function displayJobSearchData(jobInfo) {
     // The variable "singleJobInfo" will display information for a single job.
     // Variables created to display data from LinkedIn Job Search API
         const singleJobInfo = jobInfo[index];
+        const jobInfoContainer = document.createElement("div")
+        jobInfoContainer.setAttribute("class", "align-job-info")
         const jobRole = document.createElement("h2");
         const jobCompany = document.createElement("p");
         const jobLocation = document.createElement("p");
@@ -32,7 +34,7 @@ function displayJobSearchData(jobInfo) {
         singleJobPost.setAttribute('class', "single-job-post")
         const here = document.createTextNode("Here")
         const savedButton =document.createElement('button')
-        savedButton.setAttribute('class', 'button is-warning')
+        savedButton.setAttribute('class', 'button is-primary')
         savedButton.setAttribute('data-info',btoa(JSON.stringify(singleJobInfo)))
         savedButton.textContent = "Save Job"
 
@@ -53,13 +55,14 @@ function displayJobSearchData(jobInfo) {
 
         jobCompanyUrl.appendChild(here);
         singleJobPost.append(jobRole)
-        singleJobPost.append(jobCompany)
-        singleJobPost.append(jobLocation)
-        singleJobPost.append(jobPostDate)
+        jobInfoContainer.append(jobCompany)
+        jobInfoContainer.append(jobLocation)
+        jobInfoContainer.append(jobPostDate)
         jobCompanyUrlCont.append(jobCompanyUrl)
-        singleJobPost.append(jobCompanyUrlCont)
+        jobInfoContainer.append(jobCompanyUrlCont)
         jobPostUrlCont.append(jobPostUrl)
-        singleJobPost.append(jobPostUrlCont)
+        jobInfoContainer.append(jobPostUrlCont)
+        singleJobPost.append(jobInfoContainer)
         singleJobPost.append(savedButton)
         allJobsContainer.append(singleJobPost)
     }
