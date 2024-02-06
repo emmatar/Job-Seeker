@@ -74,3 +74,7 @@ allJobsContainer.addEventListener('click', function(event){
         localStorage.setItem('savedJobs', JSON.stringify(currentSavedJobs))
     }
 })
+document.getElementById('saved-jobs').addEventListener('click', function(){
+    window.location.assign('saved.html')
+})
+

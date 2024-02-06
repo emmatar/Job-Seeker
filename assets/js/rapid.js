@@ -21,7 +21,7 @@ function performSearch() {
         .then(data => {
             if (data) {
                 const salaries = []
-                data.array.forEach(element => {
+                data.forEach(element => {
                     salaries.push(element.median_salary)
                 });
                 const median_salary = salaries.reduce((a, b)=> a+b)/salaries.length
