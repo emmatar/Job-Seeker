@@ -13,16 +13,22 @@
   <body>
     <div class="full-height">
       <h1 class="title is-1 has-text-centered">Job Seeker</h1>
-      <div class="search-bar field has-addons">
+      <div class="search-bar field">
         <div class="control is-expanded">
           <input
-            id="searchInput"
+            id="jobSearchInput"
             class="input is-medium"
             type="text"
-            placeholder="Search jobs"
+            placeholder="Enter Job Title"
           />
+          <input
+          id="citySearchInput"
+          class="input is-medium"
+          type="text"
+          placeholder="Enter City"
+        />
         </div>
-        <div class="control">
+        <div class="is-flex is-justify-content-center">
           <button id="searchButton" class="button is-medium is-primary">
             Search
           </button>

@@ -3,6 +3,10 @@
 linkedinJobSearch().then(function(data) {
     displayJobSearchData(data)
 })
+
+performSearch().then(function(data) {
+    displayJobSearchSalary
+});
  
 function displayJobSearchData(jobInfo) {
     // (jobInfo) is the data from the search.
@@ -54,5 +58,5 @@ function displayJobSearchData(jobInfo) {
     }
 }
 
-performSearch()
+performSearch();
 linkedinJobSearch();

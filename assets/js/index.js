@@ -1,13 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const searchInput = document.getElementById('searchInput');
+  const jobSearchInput = document.getElementById('jobSearchInput');
+  const citySearchInput = document.getElementById('citySearchInput');
+
   const searchButton = document.getElementById('searchButton');
   const heartButton = document.getElementById('heartButton');
   const historyList = document.getElementById('historyList');
 
   searchButton.addEventListener('click', function () {
     console.log('Search button clicked!');
-    const searchTerm = searchInput.value.trim();
-
+    const searchTerm = {
+      job: jobSearchInput.value.trim(),
+      city: citySearchInput.value.trim()
+    }
     if (searchTerm !== '') {
       // Save search term to local storage
       saveToLocalStorage(searchTerm);
