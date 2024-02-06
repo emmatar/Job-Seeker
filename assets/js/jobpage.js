@@ -27,6 +27,11 @@ function displayJobSearchData(jobInfo) {
         const singleJobPost = document.createElement("div");
         singleJobPost.setAttribute('class', "single-job-post")
         const here = document.createTextNode("Here")
+        const savedButton =document.createElement('button')
+        savedButton.setAttribute('class', 'button is-warning')
+        savedButton.textContent = "Save Job"
+
+
         
     // Assigning the "loop" created elements to the corresponding data for display
         jobRole.textContent = `Job Role: ${singleJobInfo.job_title}`;
@@ -51,6 +56,7 @@ function displayJobSearchData(jobInfo) {
         singleJobPost.append(jobCompanyUrlCont)
         jobPostUrlCont.append(jobPostUrl)
         singleJobPost.append(jobPostUrlCont)
+        singleJobPost.append(savedButton)
         allJobsContainer.append(singleJobPost)
     }
 }
