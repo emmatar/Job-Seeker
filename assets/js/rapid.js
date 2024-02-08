@@ -6,7 +6,7 @@ function performSearch() {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': "000a446bbfmsh0b765db081fa211p16838ajsnc0699b8fe997",
+            'X-RapidAPI-Key': "9b4eb6b0a8msh526792f8f2a7d36p120473jsn60da7eb64d58",
             'X-RapidAPI-Host': "job-salary-data.p.rapidapi.com"
         }
     };

@@ -383,7 +383,7 @@ function linkedinJobSearch() {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "X-RapidAPI-Key": "274de67861mshb9f8ba27390121ap16d7b9jsn264fc67ff7a5",
+      "X-RapidAPI-Key": "e1ed0f45eemsh7f31865b58678f9p170348jsn30091e2508cc",
       "X-RapidAPI-Host": "linkedin-jobs-search.p.rapidapi.com",
     },
     body: JSON.stringify( {
