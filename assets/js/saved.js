@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
     const savedJobsContainer = document.querySelector('.all-jobs-container');
 
