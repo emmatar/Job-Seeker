@@ -10,42 +10,25 @@
 <body>
     <header class="has-background-primary">
         <h1>Job Seeker</h1>
-        <!-- <div id="search-save-container">
-            <div id="mini-search" class="field has-addons">
-                <div class="control">
-                  <input class="input" type="text" placeholder="Search For a Job">
-                  <div class="control">
-                    <button class="button is-black">
-                      Search
-                    </button>
-                  </div>
-                </div>
-            </div>
-            <button id="saved-jobs" class="button is-primary has-background-black">Saved Jobs</button>
-        </div>
-            <button class="margin button is-primary has-background-black">Saved Jobs</button>
-        </div> -->
-        <div class="search-bar field jobpageinput">
-            <div class="control is-expanded">
-              <input
-                id="jobSearchInput"
-                class="input is-medium input-sizing"
-                type="text"
-                placeholder="Enter Job Title"
-              />
-              <input
-              id="citySearchInput"
-              class="input is-medium input-sizing"
-              type="text"
-              placeholder="Enter City"
-            />
-            </div>
-            <div class="is-flex is-justify-content-center">
-              <button id="searchButton" class="button is-medium is-black">
-                Search
-              </button>
-            </div>
+
+        <div class="section">
+          <div class="container">
+              <div class="field is-grouped">
+                  <p class="control is-expanded">
+                      <input class="input" type="text" id="jobSearchInput" placeholder="Enter Job Title">
+                  </p>
+                  <p class="control is-expanded">
+                      <input class="input" type="text" id="citySearchInput" placeholder="Enter City">
+                  </p>
+                  <p class="control">
+                      <button class="button is-black" id="searchButton">Search</button>
+                  </p>
+              </div>
           </div>
+      </div>
+
+
+          
     </header>
 
     <main class="has-text-white">
@@ -54,7 +37,7 @@
         </div>
     </main>
     <script src="/assets/js/linkedin.js"></script>
-    <!-- <script src="/assets/js/rapid.js"></script> -->
+    <script src="/assets/js/rapid.js"></script>
     <script src="/assets/js/jobpage.js"></script>
 
 </body>

@@ -13,10 +13,11 @@ main {
 
 h1 {
     margin-left: 1rem;
-    font-size: 40pt;
+    font-size: 90px;
     text-decoration: 4px underline;
     text-underline-offset: 8px;
     text-decoration-color: white;
+    margin-left: 140px;
 }
 
 h2 {
@@ -24,12 +25,19 @@ h2 {
     font-size: 25px;
 }
 
-button {
-    margin-left: .5rem;
+p {
+    width: fit-content;
 }
 
 a {
-    width: 10px
+    width: 100px;
+}
+
+
+.all-jobs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .all-jobs-container {
@@ -40,7 +48,6 @@ a {
 .single-job-post {
     border: 1px solid white;
     max-width: 300px;
-    flex-direction: ro
 }
 
 .job-post {
@@ -49,6 +56,35 @@ a {
     border: 1px solid white;
     margin: 2rem;
 }
+
+.spacer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.url {
+    width: fit-content;
+
+}
+.field.is-grouped > .control {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto; /* Adjust this as needed */
+}
+
+.input {
+    width: auto; /* Allows you to control the width through flex-basis or add a specific width */
+}
+
+/* Optional: If you find the button size too large compared to the inputs */
+.button.is-black {
+    height: auto;
+    padding: 10px 15px; /* Adjust padding to make the button smaller or larger */
+}
+
+
+
 
 .spacer {
     display: flex;

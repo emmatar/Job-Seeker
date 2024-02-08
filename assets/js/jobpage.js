@@ -1,7 +1,10 @@
 // this function links the data from the outer linkedIn.js file to this file.
 // "data" (the above parameter) is the actual info that the search will display
 linkedinJobSearch().then(function(data) {
-    console.log(data)
+    if(!data || data.error) {
+        document.querySelector(".all-jobs-container").innerHTML = `<h1>${data?.error || "Data Retrieval Failed"}</h1>`;
+        return
+    }
     displayJobSearchData(data)
 })
 
@@ -18,7 +21,10 @@ function displayJobSearchData(jobInfo) {
     // The variable "singleJobInfo" will display information for a single job.
     // Variables created to display data from LinkedIn Job Search API
         const singleJobInfo = jobInfo[index];
+        const jobInfoContainer = document.createElement("div")
+        jobInfoContainer.setAttribute("class", "align-job-info")
         const jobRole = document.createElement("h2");
+        jobRole.setAttribute('class', 'job-role-title')
         const jobCompany = document.createElement("p");
         const jobLocation = document.createElement("p");
         const jobPostDate = document.createElement("p");
@@ -30,9 +36,11 @@ function displayJobSearchData(jobInfo) {
         jobPostUrlCont.setAttribute('class', 'url');
         const singleJobPost = document.createElement("div");
         singleJobPost.setAttribute('class', "single-job-post")
+        const jobDetailCont = document.createElement("div")
+        jobDetailCont.setAttribute("class", "detail-container")
         const here = document.createTextNode("Here")
         const savedButton =document.createElement('button')
-        savedButton.setAttribute('class', 'button is-warning')
+        savedButton.setAttribute('class', 'button is-primary')
         savedButton.setAttribute('data-info',btoa(JSON.stringify(singleJobInfo)))
         savedButton.textContent = "Save Job"
 
@@ -41,7 +49,7 @@ function displayJobSearchData(jobInfo) {
     // Assigning the "loop" created elements to the corresponding data for display
         jobRole.textContent = `Job Role: ${singleJobInfo.job_title}`;
         jobCompany.textContent = `Company: ${singleJobInfo.company_name}`;
-        jobLocation.textContent = `Location: ${singleJobInfo.jon_location}`;
+        jobLocation.textContent = `Location: ${singleJobInfo.job_location}`;
         jobPostDate.textContent = `Post Date: ${singleJobInfo.posted_date}`;
         jobCompanyUrlCont.textContent = "Company-Url: "
         jobPostUrlCont.textContent = "Job-Post-Url: "
@@ -51,18 +59,22 @@ function displayJobSearchData(jobInfo) {
         jobCompanyUrl.title = "This is link"
         jobCompanyUrl.href = singleJobInfo.company_url;
 
+        jobPostUrl.appendChild(here);
         jobCompanyUrl.appendChild(here);
         singleJobPost.append(jobRole)
-        singleJobPost.append(jobCompany)
-        singleJobPost.append(jobLocation)
-        singleJobPost.append(jobPostDate)
+        jobInfoContainer.append(jobCompany)
+        jobInfoContainer.append(jobLocation)
+        jobInfoContainer.append(jobPostDate)
         jobCompanyUrlCont.append(jobCompanyUrl)
-        singleJobPost.append(jobCompanyUrlCont)
+        jobInfoContainer.append(jobCompanyUrlCont)
         jobPostUrlCont.append(jobPostUrl)
-        singleJobPost.append(jobPostUrlCont)
+        jobInfoContainer.append(jobPostUrlCont)
+        singleJobPost.append(jobInfoContainer)
         singleJobPost.append(savedButton)
         allJobsContainer.append(singleJobPost)
+
     }
+
 }
 
 // performSearch();
