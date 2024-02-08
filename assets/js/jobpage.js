@@ -47,10 +47,10 @@ function displayJobSearchData(jobInfo) {
         jobPostUrlCont.textContent = "Job-Post-Url: "
         jobPostUrl.title = "This is link"
         jobPostUrl.href = singleJobInfo.job_url;
+        jobPostUrl.textContent = "Here"
         jobCompanyUrl.title = "This is link"
         jobCompanyUrl.href = singleJobInfo.company_url;
 
-        jobPostUrl.appendChild(here);
         jobCompanyUrl.appendChild(here);
         singleJobPost.append(jobRole)
         singleJobPost.append(jobCompany)
