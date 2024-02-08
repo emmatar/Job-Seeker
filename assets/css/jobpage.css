@@ -13,10 +13,11 @@ main {
 
 h1 {
     margin-left: 1rem;
-    font-size: 40pt;
+    font-size: 90px;
     text-decoration: 4px underline;
     text-underline-offset: 8px;
     text-decoration-color: white;
+    margin-left: 140px;
 }
 
 h2 {
@@ -62,6 +63,22 @@ a {
     width: fit-content;
 
 }
+.field.is-grouped > .control {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto; /* Adjust this as needed */
+}
+
+.input {
+    width: auto; /* Allows you to control the width through flex-basis or add a specific width */
+}
+
+/* Optional: If you find the button size too large compared to the inputs */
+.button.is-black {
+    height: auto;
+    padding: 10px 15px; /* Adjust padding to make the button smaller or larger */
+}
+
 
 
 

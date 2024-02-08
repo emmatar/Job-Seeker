@@ -1,7 +1,10 @@
 // this function links the data from the outer linkedIn.js file to this file.
 // "data" (the above parameter) is the actual info that the search will display
 linkedinJobSearch().then(function(data) {
-    console.log(data)
+    if(!data || data.error) {
+        document.querySelector(".all-jobs-container").innerHTML = `<h1>${data?.error || "Data Retrieval Failed"}</h1>`;
+        return
+    }
     displayJobSearchData(data)
 })
 
