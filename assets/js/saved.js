@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
     const savedJobsContainer = document.querySelector('.all-jobs-container');
 
@@ -14,7 +15,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
         createAndAppendElement('div', 'job-role', jobInfo.job_title, jobPost);
         createAndAppendElement('div', 'company-name', jobInfo.company_name, jobPost);
-        creantAndAppendElement('div', 'location', jobInfo.job_location, jobPost);
-        createAndAppendElement('div', 'median-salary', `Median Salary: ${jobInfo.median_salary}`, jobPost)
+        createAndAppendElement('div', 'location', jobInfo.job_location, jobPost);
+        createAndAppendElement('a', 'url', "View Job", jobPost, jobInfo.job_url)
+        return jobPost
+    }
+    function createAndAppendElement(element, id, textContent, appendTo, href = null) {
+        const newEl = document.createElement(element)
+        newEl.setAttribute('id', id)
+        newEl.textContent = textContent
+        if (href) {
+            newEl.href=href
+        }
+        appendTo.append(newEl)
     }
 })

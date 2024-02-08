@@ -40,6 +40,11 @@ a {
     justify-content: center;
 }
 
+.all-jobs-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .single-job-post {
     border: 1px solid white;
     max-width: 300px;
@@ -81,5 +86,22 @@ a {
 
 
 
+.spacer {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
 
+.url {
+    display: flex;
+}
 
+#search-save-container {
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+}
+
+#mini-search {
+    margin: 0;
+}
