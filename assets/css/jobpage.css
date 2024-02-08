@@ -20,25 +20,26 @@ h1 {
 }
 
 h2 {
+    margin: 1rem 2rem;
     font-size: 25px;
 }
 
-button {
-    margin-left: .5rem;
+p {
+    width: fit-content;
 }
 
 a {
     width: 100px;
 }
 
+
 .all-jobs-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .single-job-post {
-    display: flex;
-    flex-wrap: wrap;
     border: 1px solid white;
     max-width: 300px;
     flex-direction: ro
@@ -51,28 +52,18 @@ a {
     margin: 2rem;
 }
 
-.job-role-title {
-    margin: 1rem;
-}
-
-.job-det
-
 .spacer {
     display: flex;
-    justify-content: space-around;
-    margin: 2rem 0;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .url {
-    display: flex;
+    width: fit-content;
+
 }
 
-#search-save-container {
-    display: flex;
-    margin: 1rem;
-    align-items: center;
-}
 
-#mini-search {
-    margin: 0;
-}
+
+
+
