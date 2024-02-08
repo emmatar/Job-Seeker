@@ -24,6 +24,7 @@ function displayJobSearchData(jobInfo) {
         const jobInfoContainer = document.createElement("div")
         jobInfoContainer.setAttribute("class", "align-job-info")
         const jobRole = document.createElement("h2");
+        jobRole.setAttribute('class', 'job-role-title')
         const jobCompany = document.createElement("p");
         const jobLocation = document.createElement("p");
         const jobPostDate = document.createElement("p");
@@ -35,6 +36,8 @@ function displayJobSearchData(jobInfo) {
         jobPostUrlCont.setAttribute('class', 'url');
         const singleJobPost = document.createElement("div");
         singleJobPost.setAttribute('class', "single-job-post")
+        const jobDetailCont = document.createElement("div")
+        jobDetailCont.setAttribute("class", "detail-container")
         const here = document.createTextNode("Here")
         const savedButton =document.createElement('button')
         savedButton.setAttribute('class', 'button is-primary')
@@ -56,6 +59,7 @@ function displayJobSearchData(jobInfo) {
         jobCompanyUrl.title = "This is link"
         jobCompanyUrl.href = singleJobInfo.company_url;
 
+        jobPostUrl.appendChild(here);
         jobCompanyUrl.appendChild(here);
         singleJobPost.append(jobRole)
         jobInfoContainer.append(jobCompany)
@@ -68,7 +72,9 @@ function displayJobSearchData(jobInfo) {
         singleJobPost.append(jobInfoContainer)
         singleJobPost.append(savedButton)
         allJobsContainer.append(singleJobPost)
+
     }
+
 }
 
 // performSearch();

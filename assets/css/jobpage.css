@@ -21,9 +21,8 @@ h1 {
 }
 
 h2 {
-    text-align: center;
-    font-size: 21px;
-    word-wrap: break-word;
+    margin: 1rem 2rem;
+    font-size: 25px;
 }
 
 p {
@@ -31,7 +30,7 @@ p {
 }
 
 a {
-    width: 10px
+    width: 100px;
 }
 
 
@@ -42,16 +41,18 @@ a {
 }
 
 .single-job-post {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 1.5rem;
-    padding: 1rem;
     border: 1px solid white;
-    width: 300px;
+    max-width: 300px;
 }
-.align-job-info{
-    padding: 5px;
+
+.job-post {
+    height: 300px;
+    width: 250px;
+    border: 1px solid white;
+    margin: 2rem;
+}
+
+.spacer {
     display: flex;
     flex-direction: column;
     justify-content: center;
